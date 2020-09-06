@@ -3,7 +3,7 @@
 This project was made with Anaconda (latest version) in a docker environment. To make sure that everything will work, make sure to run this project in docker or at least in a updated conda environment.
 
 ## How to execute
-<p> First of all, you need to download the data to execute the project. It's almost 2gb of data so I decided to upload on my own S3 bucket. </p>
+<p> First of all, you'll need to download the data to execute the project. It's almost 2gb of data so I decided to upload on my own S3 bucket. </p>
 
 <p>You can download the files by clicking <a href="https://data-sprints-desafio.s3.us-east-2.amazonaws.com/data.zip">here</a></p>
 
