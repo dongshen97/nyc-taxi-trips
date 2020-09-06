@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  anaconda:
+    container_name: anaconda
+    image: continuumio/anaconda3
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/opt/notebooks
+    command: bash -c "conda install jupyter pip -y && jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root --NotebookApp.token='jupytertoken' --NotebookApp.password='jupytertoken'"
+    

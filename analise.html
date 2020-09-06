@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- HTML 4 -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- HTML5 -->
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kufam&family=Roboto:ital@1&display=swap" rel="stylesheet">    <style>
+      body{
+        width: 1400px;
+        background-color:#f3f3f3;
+        margin:auto;
+        font-family: 'Kufam', cursive;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      #bg {
+        width: "100%";
+        height: 1080px;
+
+        background-image: url('https://data-sprints-desafio.s3.us-east-2.amazonaws.com/bg.jpg');
+        background-size: cover;
+        margin: -500px 0 0 0;
+        opacity: 0.3;
+      }
+
+      .container{
+        position: relative;
+      }
+
+      .text-header{
+        position: absolute;
+        bottom: 30%;
+        left: 10%;
+      }
+
+      .top3_vendor{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
+      .content{
+        padding-top: 40px;
+        width: 1300px;
+        margin: auto;
+      }
+
+      .images{
+        clear: both;
+        display: table;
+      }
+
+      .histogram{
+        padding: 5px;
+        width: 630px;
+        float: left;
+      }
+
+      p{
+        font-size: 20px;
+      }
+    </style>
+    <title>Analise</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="bg"></div>
+      <div class="text-header">
+        <div style="font-size: 50px; font-weight: bold;">NYC Taxi Trips ​</div>
+        <div style="font-size: 20px; font-weight: normal;">Uma breve análise em corridas de táxi de Nova Iorque</div>
+      </div>
+    </div>
+
+    <div class=content>
+      <h1>Introdução</h1>
+      <p>Nova Iorque é uma das cidades mais populosas do mundo e também é uma das cidades com maior fluxo
+        de pessoas. Uma das localidades mais importantes da cidade que contribui para todo este fluxo é Manhattan,
+        o mais antigo e mais densamente povoado dos cinco burgos que formam a cidade de NY. 
+      </p>
+
+      <p>Uma das coisas mais icônicas da cidade são os taxi amarelos, conhecidos em praticamente
+        todo o mundo. Os táxis são operados por empresas particulares e licenciados por um órgão municipal 
+        chamado New York City Taxi and Limousine Comission, responsável pelos mais de 13 mil táxis que rodam na cidade.
+      </p>
+
+      <p>Hoje faremos uma breve análise sobre este gigante mercado de NY.
+      </p>
+    </div>
+
+    <div class=content>
+      <h1>Distância média percorrida</h1>
+      <p>Análisamos cerca de 4 milhões de registros, de 2009 à 2012, de informações sobre
+        corridas de taxi em nova Iorque
+      </p>
+
+      <p>Descobrimos que neste período, houve uma média de 3.7km percorridos pelos táxis com no máximo
+        2 passageiros, e esse valor não muda muito quando olhamos para apenas um passageiro, que é de 3.64km
+      </p>
+
+      <p>Nos finais de semana, o tempo médio das corridas é de aproximadamente 8 minutos e 44 segundos. Um tempo
+        bastante curto se formos pensar na densidade populacional de NY. E outro ponto é que esta média
+        é a mesma quando falamos de dias de semana. NY é uma cidade que não para.
+      </p>
+    </div>
+
+    <div class=content>
+      <h1>O mercado milhonário de táxis</h1>
+      <p>Já era de se imaginar que NY tem um dos maiores mercados de Táxi do mundo, podemos observar
+        isso com o gráfico a seguir, onde neste mesmo período (2009 - 2012) este mercado movimentou
+        cerca de U$$: 41,7 Milhões. 
+      </p>
+
+      <p>É um mercado bastante grande, uma vez que a média do valor de cada viagem é de aproximadamente U$$: 10,00
+      </p>
+      
+      <img class="top3_vendor" src="https://data-sprints-desafio.s3.us-east-2.amazonaws.com/top3_vendor.jpeg" alt="">
+
+      <p>Outra métrica muito interessante que conseguimos notar é o quanto essas empresas naquela época
+        ainda usavam dinheiro físico. Abaixo temos a representação em histogramas de cada ano com a 
+        distribuição por mês de pagamentos em dinheiro. 
+      </p>
+
+      <p>
+        Um ponto interessante a ressaltar aqui
+        é que 81% das corridas deste dataset é constituido por pagamentos em dinheiro. Tavez estes números
+        mudem se compararmos o mercado atual, onde temos aplicativos como Uber facilitando as formas
+        de pagamento e diversidade na locomoção. É algo que podemos especular, uma vez que temos um gigantesco
+        mercado de táxis amarelos em Nova Iorque, como será que ficam os motoristas de aplicativos na cidade?
+      </p>
+
+      <div class="images">
+        <img class="histogram" src="https://data-sprints-desafio.s3.us-east-2.amazonaws.com/hist_2009.jpeg" alt="">
+        <img class="histogram" src="https://data-sprints-desafio.s3.us-east-2.amazonaws.com/hist_2010.jpeg" alt="">
+        <img class="histogram" src="https://data-sprints-desafio.s3.us-east-2.amazonaws.com/hist_2011.jpeg" alt="">
+        <img class="histogram" src="https://data-sprints-desafio.s3.us-east-2.amazonaws.com/hist_2012.jpeg" alt="">
+      </div>
+
+      <p>
+        Nos anos de 2009 e 2010, há uma grande queda na quantidade de pagamentos em dinheiro no mês de Dezembro,
+        é um pouco estranho de se observar, uma vez que este mês está associado à datas festivas como natal 
+        e ano novo. Outro fator curioso é que em 2011 não há registro de pagamentos em dinheiro no mês de dezembro
+        e o mesmo se repete para o ano de 2012 que além de não possuir registro em Dezembro, também não possuí 
+        em Novembro.
+      </p>
+    </div>
+
+    <div class=content>
+      <h1>Densidade de viagens</h1>
+      <p>Para termos uma noção melhor da quantidade de corridas, olharemos para um mapa
+        de Nova Iorque para termos uma noção da imensidão da quantidade de corridas. 
+      </p>
+
+      <p>Aqui temos um mapa indicando a densidade de embarques de passageiros</p>
+
+      <iframe style="border:none;" width="100%" height="700" src="https://data-sprints-desafio.s3.us-east-2.amazonaws.com/pickups_maps.html" title="description"></iframe>
+
+      <p>Note que centro de Manhattan é onde se concentra a maior quantidade de embarques de passageiros</p>
+
+      <p>Se olharmos para a densidade de desembarques, vemos uma maior quantidade na região periférica
+        de Manhattan se comparado com os embarques. Mas ainda temos muitos desembarques no centro. Isso nos mostra
+        que o centro em geral tem um fluxo de locomoção muito intenso. É importante destacar que temos mais desembarques
+        fora do centro em comparação aos embarques, o que nos leva a acreditar que as pessoas costumam voltar pra casa
+        de táxi com mais frequência. 
+      </p>
+
+      <iframe style="border:none;" width="100%" height="700" src="https://data-sprints-desafio.s3.us-east-2.amazonaws.com/dropoffs_maps.html" title="description"></iframe>
+    </div>
+
+    <div class=content>
+      <h1>A generosidade dos Americanos</h1>
+      <p>Nos EUA, em geral, as pessoas costumam pagar gorjetas quando um serviço prestado é de qualidade. É um 
+        gesto de agradecimento ao prestador de serviço. Isso se aplica com mais frequência à restaurantes e 
+        viagens de táxi. Aqui estamos olhando para o número de gorjetas pagas nos últimos 3 meses que se tem 
+        registro do ano de 2012 (Agosto - Outubro).
+      </p>
+
+      <iframe style="border:none;" width="100%" height="700" src="https://data-sprints-desafio.s3.us-east-2.amazonaws.com/time_series.html" title="description"></iframe>
+
+      <p>A variação não é muito grande e podemos perceber que pagamentos de gorjetas são muito comuns neste
+        mercado de táxi em Nova Iorque. Não podemos dizer que isso é uma verdade em todo mundo ou em todos os lugares
+        dos EUA, teriamos que analisar mais dados para chegar à uma conclusão sobre outras localidades.
+      </p>
+    </div>
+      
+  </body>  
+</html>
